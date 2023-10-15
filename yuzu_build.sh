@@ -18,5 +18,5 @@ cd yuzu-mainline
 ./.ci/scripts/linux/upload.sh
 # copy appimage to root folder
 cd ..
-cp yuzu-mainline/build/yuzu-* yuzu.Appimage
+cp yuzu-mainline/build/yuzu-* yuzu.AppImage
 
