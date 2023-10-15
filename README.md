@@ -6,4 +6,6 @@ Aslo you need to add your user to docker group with `sudo usermod -aG docker use
 ## To build yuzu with clang you need to run yuzu_build.sh in empty folder
 It will build yuzu inside of the Docker container and drop clang build AppImage into the script folder
 
+If script doen't run do `chmod +X yuzu_build.sh` and try again
+
 This yuzu build won't run on cpu's without x86_64v3 support
