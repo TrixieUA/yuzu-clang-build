@@ -12,7 +12,7 @@ make main script file executable and run it
 
 `chmod +x yuzu_build.sh && ./yuzu_build.sh`
 
-Wait untill build finishes and grap your AppImage
+Wait untill build finishes and grab your AppImage
 
 ## Notes
 You'll have to rebuild yuzu with each yuzu update
