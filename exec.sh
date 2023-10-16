@@ -12,5 +12,5 @@ sudo chown -R 1027 ./
 # AZURECIREPO TITLEBARFORMATIDLE TITLEBARFORMATRUNNING DISPLAYVERSION 
 #  are requested in src/common/CMakeLists.txt and appear to be provided somewhere in Azure DevOps
 
-docker run -e ENABLE_COMPATIBILITY_REPORTING -e CCACHE_DIR=/yuzu/ccache -v "$(pwd):/yuzu" -w /yuzu yuzuemu/build-environments:linux-fresh /bin/bash /yuzu/.ci/scripts/linux/docker.sh "$1"
+docker run -e ENABLE_COMPATIBILITY_REPORTING -e CCACHE_DIR=/yuzu/ccache -v "$(pwd):/yuzu" -w /yuzu trixieua-fedora-yuzu-build /bin/bash /yuzu/.ci/scripts/linux/docker.sh "$1"
 sudo chown -R $UID ./

@@ -12,8 +12,8 @@ mkdir build || true && cd build
 cmake .. \
             -DCMAKE_BUILD_TYPE=Release \
       -DCMAKE_CXX_FLAGS="-march=x86-64-v3" \
-      -DCMAKE_CXX_COMPILER=/usr/lib/ccache/clang++ \
-      -DCMAKE_C_COMPILER=/usr/lib/ccache/clang \
+      -DCMAKE_CXX_COMPILER=/usr/bin/clang++ \
+      -DCMAKE_C_COMPILER=/usr/bin/clang \
       -DCMAKE_INSTALL_PREFIX="/usr" \
       -DDISPLAY_VERSION=$1 \
       -DENABLE_COMPATIBILITY_LIST_DOWNLOAD=ON \
@@ -73,5 +73,3 @@ find AppDir -type f -regex '.*libwayland-client\.so.*' -delete -print
 # See https://github.com/darealshinji/AppImageKit-checkrt
 cp exec-x86_64.so AppDir/usr/optional/exec.so
 cp AppRun.sh AppDir/AppRun
-cp --dereference /usr/lib/x86_64-linux-gnu/libstdc++.so.6 AppDir/usr/optional/libstdc++/libstdc++.so.6
-cp --dereference /lib/x86_64-linux-gnu/libgcc_s.so.1 AppDir/usr/optional/libgcc_s/libgcc_s.so.1
