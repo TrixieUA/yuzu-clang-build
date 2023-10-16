@@ -10,10 +10,11 @@ ccache -s
 
 mkdir build || true && cd build
 cmake .. \
-            -DCMAKE_BUILD_TYPE=Release \
-      -DCMAKE_CXX_FLAGS="-march=x86-64-v3" \
+      -DCMAKE_BUILD_TYPE=Release \
+      -DCMAKE_CXX_FLAGS="-march=x86-64-v3 -O3 -m64 -pipe" \
       -DCMAKE_CXX_COMPILER=/usr/bin/clang++ \
       -DCMAKE_C_COMPILER=/usr/bin/clang \
+      -DCMAKE_CXX_LINKER=/usr/bin/mold \
       -DCMAKE_INSTALL_PREFIX="/usr" \
       -DDISPLAY_VERSION=$1 \
       -DENABLE_COMPATIBILITY_LIST_DOWNLOAD=ON \
